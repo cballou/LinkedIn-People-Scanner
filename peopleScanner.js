@@ -47,7 +47,7 @@
                 $body = $cardContainer.find('.vcard-body');
 
             $body.css('height', '60px');
-            $body.find('> p, > span').css({ width: 'auto', maxWidth: 'auto' });
+            $body.find('> p, > span').css({ width: 'auto', 'max-width': 'auto !important' });
             $cardContainer.find('.photo img').css({ height: '55px', width: '55px' });
             $cardContainer.css('height', '103px');
             $cardContainer.css({
