@@ -49,7 +49,6 @@
             $body.css('height', '60px');
             $body.find('> p, > span').css({ width: 'auto', maxWidth: 'auto' });
             $cardContainer.find('.photo img').css({ height: '55px', width: '55px' });
-            $cardContainer.find('.v
             $cardContainer.css('height', '103px');
             $cardContainer.css({
                 width: '100%',
