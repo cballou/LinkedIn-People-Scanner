@@ -29,10 +29,7 @@
      */
     loadScript("https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js", function () {
         var $cardWrapper = $('#pymk-people-card');
-
 	    if ($cardWrapper.length) {
-            console.log('card wrapper found');
-
     		// trigger initial fix
     		fixCards($cardWrapper.find('.card:not(.fixed)'));
     	
@@ -46,8 +43,18 @@
 	    }
 	
 	    function fixCards($cards) {
-            console.log('fixing cards');
-	        $cards.addClass('fixed').css({ marginRight: 0, width: '100%' });
+            var $cardContainer = $cards.find('.vcard-container');
+            $cardContainer.find('.vcard-body').css('height', '60px');
+            $cardContainer.find('.photo img').css({ height: '55px', width: '55px' });
+            $cardContainer.css('height', '103px');
+            $cardContainer.css({
+                width: '100%',
+                height: '103px',
+                boxSizing: 'border-box',
+                MozBoxSizing: 'border-box',
+                WebkitBoxSizing: 'border-box'
+            });
+            $cards.addClass('fixed').css({ marginRight: 0, width: '100%', height: '103px' });
 	    }
     });
 })();
