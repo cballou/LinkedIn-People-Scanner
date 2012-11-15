@@ -7,14 +7,14 @@
         var script = document.createElement("script")
         script.type = "text/javascript";
 
-        if (script.readyState) { //IE
+        if (script.readyState) {
             script.onreadystatechange = function () {
                 if (script.readyState == "loaded" || script.readyState == "complete") {
                     script.onreadystatechange = null;
                     callback();
                 }
             };
-        } else { //Others
+        } else {
             script.onload = function () {
                 callback();
             };
@@ -43,9 +43,13 @@
 	    }
 	
 	    function fixCards($cards) {
-            var $cardContainer = $cards.find('.vcard-container');
-            $cardContainer.find('.vcard-body').css('height', '60px');
+            var $cardContainer = $cards.find('.vcard-container'),
+                $body = $cardContainer.find('.vcard-body');
+
+            $body.css('height', '60px');
+            $body.find('> p, > span').css({ width: 'auto', maxWidth: 'auto' });
             $cardContainer.find('.photo img').css({ height: '55px', width: '55px' });
+            $cardContainer.find('.v
             $cardContainer.css('height', '103px');
             $cardContainer.css({
                 width: '100%',
