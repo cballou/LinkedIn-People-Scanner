@@ -1,7 +1,7 @@
 # LinkedIn People Scanner (Bookmarklet) #
 
 Have you ever tried using LinkedIn's people recommendations page to find new professional connections? It's two column
-layout isn't condusive for quick scans because your eyes keep darting from side to side. This bookmarklet aims to fix that.
+layout isn't conducive for quick scans because your eyes keep darting from side to side. This bookmarklet aims to fix that.
 
 ## Currently Alpha ##
 
